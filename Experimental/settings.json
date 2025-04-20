@@ -5,7 +5,15 @@
       "modes": [
         "fullstack-conductor",
         "python-backend-dev"
-      ]
+      ],
+      "commandWhitelist": [
+        "pytest",
+        "pip install",
+        "python -m",
+        "git diff",
+        "git status"
+      ],
+      "executionDelay": 3000
     }
   },
   "defaultShell": "cmd.exe",
@@ -38,6 +46,40 @@
         "STATE_DIR": "./.roo/agent-state"
       },
       "alwaysAllow": ["get_task_state"],
+      "disabled": false
+    },
+    "communication": {
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "./mcp-servers/agent-communication.js"
+      ],
+      "env": {
+        "COMM_DIR": "./.roo/agent-communication"
+      },
+      "alwaysAllow": [
+        "get_contract_diff_status",
+        "get_compatibility_violation_status",
+        "get_resilience_patches_for_component",
+        "search_messages"
+      ],
+      "disabled": false
+    },
+    "task-management": {
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "./mcp-servers/task-management.js"
+      ],
+      "env": {
+        "TASK_DIR": "./.roo/task-management"
+      },
+      "alwaysAllow": [
+        "get_mode_assumptions",
+        "get_task_stats",
+        "get_interaction_patterns",
+        "get_command_executions"
+      ],
       "disabled": false
     }
   }
