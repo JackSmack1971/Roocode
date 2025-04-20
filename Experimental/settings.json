@@ -27,4 +27,20 @@
     "finops-analyst": "qwen2.5-14b"
   },
   "modelFallback": "gpt-4o-mini"
+},
+{
+  "mcpServers": {
+    "conductor": {
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "./mcp-servers/conductor-functions.js"
+      ],
+      "env": {
+        "STATE_DIR": "./.roo/agent-state"
+      },
+      "alwaysAllow": ["get_task_state"],
+      "disabled": false
+    }
+  }
 }
