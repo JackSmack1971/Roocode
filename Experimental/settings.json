@@ -1,0 +1,30 @@
+{
+  "autoApproval": {
+    "command": {
+      "enabled": true,
+      "modes": [
+        "fullstack-conductor",
+        "python-backend-dev"
+      ]
+    }
+  },
+  "defaultShell": "cmd.exe",
+  "toolExecutionLogging": true,
+  "modeModelBindings": {
+    "system-strategist": "deepseek-r1",
+    "fullstack-conductor": "deepseek-r1",
+    "resilience-engineer": "deepseek-r1",
+    "python-backend-dev": "deepseek-coder-v2-instruct",
+    "python-devops": "deepseek-coder-v2-instruct",
+    "frontend-python-link": "mixtral-8x22b-instruct",
+    "docs-writer": "mixtral-8x22b-instruct",
+    "db-schema-designer": "gemini-2.5-pro",
+    "schema-compliance-auditor": "gemini-2.5-pro",
+    "qa-validator": "gemini-2.5-pro",
+    "infrasec-reviewer": "gemini-2.5-pro",
+    "python-security-review": "deepseek-r1",
+    "context-indexer": "qwen2.5-7b",
+    "finops-analyst": "qwen2.5-14b"
+  },
+  "modelFallback": "gpt-4o-mini"
+}

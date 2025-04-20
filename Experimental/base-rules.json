@@ -1,0 +1,17 @@
+{
+  "deny": {
+    "default": true
+  },
+  "allow": {
+    "fullstack-conductor": [
+      "command",
+      "read",
+      "mcp"
+    ],
+    "python-backend-dev": [
+      "command",
+      "read",
+      "edit"
+    ]
+  }
+}
