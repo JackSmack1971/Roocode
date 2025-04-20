@@ -26,9 +26,7 @@
     "context-indexer": "qwen2.5-7b",
     "finops-analyst": "qwen2.5-14b"
   },
-  "modelFallback": "gpt-4o-mini"
-},
-{
+  "modelFallback": "gpt-4o-mini",
   "mcpServers": {
     "conductor": {
       "transport": "stdio",
