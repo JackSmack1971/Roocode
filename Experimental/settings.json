@@ -81,6 +81,23 @@
         "get_command_executions"
       ],
       "disabled": false
+    },
+    "validation": {
+      "transport": "stdio",
+      "command": "node",
+      "args": [
+        "./mcp-servers/validation-reporting.js"
+      ],
+      "env": {
+        "VALIDATION_DIR": "./.roo/validation-reporting"
+      },
+      "alwaysAllow": [
+        "get_strategy_updates",
+        "get_strategy_by_id",
+        "get_motif_patterns",
+        "get_pending_schema_migrations"
+      ],
+      "disabled": false
     }
   }
 }
